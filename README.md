@@ -1,2 +1,2 @@
-# Phaser-seed — Comming Info.....
+# Phaser-seed — Phaser Seed Based on AngularJS Seed project
 
