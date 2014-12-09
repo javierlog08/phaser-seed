@@ -1,6 +1,5 @@
-logs/*
 !.gitkeep
-libs/*
+libs/
 node_modules/
 tmp
 .idea
