@@ -8,6 +8,8 @@ define([
 	'game/GameEngine'
 ],function(GameEngine){
 
+	'use strict';
+
 	/**
 	 * Game Engine initiation.
 	 * All Game Logic is on GameEngine Class.

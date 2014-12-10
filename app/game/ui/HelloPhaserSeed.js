@@ -3,14 +3,16 @@
  */
 define(function() {
 
+	'use strict';
+
 	var HelloPhaserSeed = function(Game){
 
 		var text;
 		var count = 0;
 
 		this.create = function() {
-			message = "- Phaser Seed -\n A starter project  \n for Phaser Game App. \n Click here !";
-			style = { font: "65px Arial", fill: "#ff0044", align: "center" };
+			var message = "- Phaser Seed -\n A starter project  \n for Phaser Game App. \n Click here !";
+			var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
 
 			text = Game.add.text(Game.world.centerX, Game.world.centerY, message, style);
 

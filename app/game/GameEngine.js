@@ -6,10 +6,9 @@
 define([
 	'phaser',
 	'game/ui/HelloPhaserSeed'
-],function(
-	Phaser,
-  HelloPhaserSeed /* example component display a message on screen*/
-){
+],function(Phaser,HelloPhaserSeed ){
+
+	'use strict';
 
 	var GameEngine = function() {
 
