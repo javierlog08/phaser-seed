@@ -1,5 +1,8 @@
 /**
- * Created by Administrador on 09/12/2014.
+ * Created by Javierlog08.
+ * HelloPhaser seed is an example game Component
+ * you can manipulate  preload/create/update actions from here
+ * and late invoke it with requirejs
  */
 define(function() {
 

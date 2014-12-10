@@ -1,7 +1,8 @@
 /**
  * Created By Javierlog08
+ * Game Singleton.
  * This is where you put your Phaser Game Logic
- * Can include game componente here and call it.
+ * Can include game component here and call it.
  */
 define([
 	'phaser',
@@ -12,12 +13,13 @@ define([
 
 	var GameEngine = function() {
 
-		var game;
+		this.game;
+
 		var helloPhaserSeed;
 
 		this.init = function(){
-			game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { create: create, update: update });
-			helloPhaserSeed = new HelloPhaserSeed(game);
+			this.game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { create: create, update: update });
+			helloPhaserSeed = new HelloPhaserSeed(this.game);
 		}
 
 		function create(){
