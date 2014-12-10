@@ -12,11 +12,11 @@ define([
 
 		beforeEach(function() {
 
-			// Plz Start First The Game For Test
+			// -- Plz Start First The Game For Test
 			GameEngine.init();
 
-			// Start Component*
-			this.hello = new HelloPhaserSeed(GameEngine.game)
+			// -- Start Component*
+			this.hello = new HelloPhaserSeed(GameEngine.game);
 
 		});
 

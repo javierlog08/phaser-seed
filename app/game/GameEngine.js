@@ -18,7 +18,11 @@ define([
 		var helloPhaserSeed;
 
 		this.init = function(){
+
+			// -- Init Phasergame instance
 			this.game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { create: create, update: update });
+
+			// -- Put under, imitation for all yours Phaser Components
 			helloPhaserSeed = new HelloPhaserSeed(this.game);
 		}
 

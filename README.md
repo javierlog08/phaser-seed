@@ -14,17 +14,17 @@ You have:
 Installation:
 Download and install all necessary libraries for our project
 ```
-npm install
+$ npm install
 ```
 
 Run:
 Start Node Server running at port 8000 (http://localhost:8000/app)
 ```
-npm start
+$ npm start
 ```
 
 Testing:
 Run karma unit testing
 ```
-npm test
+$ npm test
 ```
