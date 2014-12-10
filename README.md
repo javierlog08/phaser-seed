@@ -1,5 +1,7 @@
 # Phaser-seed
 =============================================================================
+[logo]: http://i.imgur.com/by5IzTe.png
+
 Phaser Seed Based  project.
 Main idea is to give a professional game skeleton with all the necessary stuff.
 You have:
