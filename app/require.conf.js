@@ -25,5 +25,5 @@ require.config({
 	},
 
 	// kick start application
-	deps: ['./game']
+	deps: ['./app']
 });
