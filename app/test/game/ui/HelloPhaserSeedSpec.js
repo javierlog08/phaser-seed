@@ -26,8 +26,16 @@ define([
 		});
 
 
-		it("create() method is working?",function(){
+		it("create() method is defined?",function(){
 			expect(this.hello.create).toBeDefined();
+		});
+
+		it("update() method is defined?",function(){
+			expect(this.hello.update).toBeDefined();
+		});
+
+		it("updateText() method is defined?",function(){
+			expect(this.hello.updateText).toBeDefined();
 		});
 
 

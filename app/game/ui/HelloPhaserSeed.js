@@ -10,27 +10,35 @@ define(function() {
 
 	var HelloPhaserSeed = function(Game){
 
-		var text;
 		var count = 0;
 
-		this.create = function() {
-			var message = "- Phaser Seed -\n A starter project  \n for Phaser Game App. \n Click here !";
-			var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
+		this.game = Game;
 
-			text = Game.add.text(Game.world.centerX, Game.world.centerY, message, style);
+		this.text;
 
-			text.anchor.setTo(0.5, 0.5);
-		}
-
-		this.update = function() {
-			Game.input.onDown.addOnce(updateText, this);
-		}
-
-		function updateText() {
+		this.updateText = function(){
 			count++;
-			text.setText("- You have clicked -\n" + count + " times !");
+			this.text.setText("- You have clicked -\n" + count + " times !");
 		}
 
+	}
+
+	/**
+	 * If you are thinking on reuse this Phaser Game Component
+	 * Plz use prototype for phaser methods.
+	 */
+	HelloPhaserSeed.prototype.create = function() {
+		var message = "- Phaser Seed -\n A starter project  \n for Phaser Game App. \n Click here !";
+		var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
+
+		this.text = this.game.add.text(this.game.world.centerX, this.game.world.centerY, message, style);
+
+		this.text.anchor.setTo(0.5, 0.5);
+	}
+
+
+	HelloPhaserSeed.prototype.update = function() {
+		this.game.input.onDown.addOnce(this.updateText, this);
 	}
 
 	return HelloPhaserSeed;
