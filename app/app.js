@@ -6,14 +6,24 @@
  */
 define([
 	'game/GameEngine'
-],function(GameEngine){
+], function (GameEngine) {
 
 	'use strict';
 
 	/**
-	 * Game Engine initiation.
-	 * All Game Logic is on GameEngine Class.
+	 * Usually we don't use DOM objects with Phaser.
+	 * However domReady only thing that do is load the engines once DOM is ready.
+	 * If you are thinking on use Jquery or Boostrap for UI, use DomReady.
 	 */
-	GameEngine.init();
+	require(['domReady'], function (domReady) {
+		domReady(function () {
+
+			/**
+			 * Game Engines Initialization.
+			 * All Core is Running here
+			 */
+			GameEngine.init();
+		});
+	});
 
 });
