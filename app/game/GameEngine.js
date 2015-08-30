@@ -4,41 +4,40 @@
  * This is where you put your Phaser Game Logic
  * Can include game component here and call it.
  */
-define([
-	'phaser',
-	'game/ui/HelloPhaserSeed'
-],function(Phaser,HelloPhaserSeed ){
+define(function (require) {
 
 	'use strict';
 
-	var GameEngine = function() {
+	var Engine                = require("game/Engine");
+	var Phaser                = require("phaser");
+	var HelloPhaserSeed       = require("game/ui/HelloPhaserSeed");
 
-		this.game;
+	var GameEngine = new Engine();
 
-		var helloPhaserSeed;
+	GameEngine.game = null;
 
-		/**
-		 * Set Phaser game instance and Game components
-		 */
-		this.init = function(){
+	var helloPhaserSeed;
 
-			// -- Init Phasergame instance
-			this.game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { create: create, update: update });
+	GameEngine.init = function ()
+	{
+		// -- Init Phasergame instance
+		GameEngine.game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', {create: create, update: update});
 
-			// -- Put under, initiation for all yours Phaser Components
-			helloPhaserSeed = new HelloPhaserSeed(this.game);
-		}
-
-		function create(){
-			helloPhaserSeed.create();
-		}
-
-		function update() {
-			helloPhaserSeed.update();
-		}
+		// -- Put under, initiation for all yours Phaser Components
+		helloPhaserSeed = new HelloPhaserSeed(GameEngine.game);
 
 	}
 
-	return new GameEngine();
+	function create()
+	{
+		helloPhaserSeed.create();
+	}
+
+	function update()
+	{
+		helloPhaserSeed.update();
+	}
+
+	return GameEngine;
 
 });
